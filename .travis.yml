@@ -15,5 +15,6 @@ notifications:
       - avdayan@bgu.ac.il
       - danit134@hotmail.com
       - rotemshp@post.bgu.ac.il
+      - sht.eitan@gmail.com
     on_success: always
     on_failure: always

@@ -21,19 +21,20 @@ public class GlobalCuses {
         launcher.buildModel();
         CtModel model = launcher.getModel();
         List<CtMethod> methods = model.getElements(new TypeFilter<>(CtMethod.class));
-        CtMethod codeDomain = methods.get(1);
+        CtMethod codeDomain = methods.get(1);//get the second method in GlobalCuses class (codeDomain)
+
         List<CtStatement> statements = codeDomain.getBody().getStatements();
-        for (CtStatement statement : statements) {
-            System.out.println("Analyzing statement at line " + statement.getPosition().getLine());
-            if(statement instanceof CtIf) {
-                CtIf ifStatement = (CtIf) statement;
-                System.out.println("If statement: " + ifStatement.getCondition());
-            }
-            if(statement instanceof CtLocalVariable) {
-                CtLocalVariable localVariable = (CtLocalVariable) statement;
-                System.out.println("Local variable declaration: " + localVariable.getReference() + " of type " + localVariable.getType());
-            }
-            if(statement instanceof CtAssignment) {
+            for (CtStatement statement : statements) {
+                System.out.println("Analyzing statement at line " + statement.getPosition().getLine());
+                if(statement instanceof CtIf) {
+                    CtIf ifStatement = (CtIf) statement;
+                    System.out.println("If statement: " + ifStatement.getCondition());
+                }
+                if(statement instanceof CtLocalVariable) {
+                    CtLocalVariable localVariable = (CtLocalVariable) statement;
+                    System.out.println("Local variable declaration: " + localVariable.getReference() + " of type " + localVariable.getType());
+                }
+                if(statement instanceof CtAssignment) {
                 CtAssignment assignment = (CtAssignment) statement;
                 System.out.println("Assigning variable " + assignment.getAssigned() + " with expression/value: " + assignment.getAssignment());
             }
