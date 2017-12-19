@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="fr.inria.gforge.spoon:spoon-core:6.0.0" type="repository">
+    <properties maven-id="fr.inria.gforge.spoon:spoon-core:6.0.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/spoon-core-6.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core-3.13.50.v20171007-0855.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsap-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/maven-model-3.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/plexus-utils-3.0.24.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

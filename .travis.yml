@@ -13,5 +13,7 @@ notifications:
   email:
     recipients:
       - avdayan@bgu.ac.il
+      - danit134@hotmail.com
+      - rotemshp@post.bgu.ac.il
     on_success: always
     on_failure: always
