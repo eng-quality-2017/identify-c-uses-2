@@ -14,7 +14,7 @@ import java.util.List;
 //no if and else
 public class GlobalCuses {
 
-    private static List<String> findCUsesInMethod(String path) {
+    public static List<String> findCUsesInMethod(String path, String varible) {
         CtModel model = createCodeModel(path);
 
         List<CtMethod> methods = model.getElements(new TypeFilter<>(CtMethod.class));
@@ -33,15 +33,14 @@ public class GlobalCuses {
                 String compitiotn = assignment.getAssignment().toString();
 
                 if(!(list_Var.contains(defVar))) list_Var.add(defVar);
-
                 if(!(list_Use.contains(compitiotn))) list_Use.add(compitiotn);
             }
         }
-
-        for (String var : list_Var) {
+        if (!(list_Var.contains(varible)))
+            return globalCuse; //return empty list no def for input varible
+//        for (String var : list_Var) {
             for (String use : list_Use) {
-                if(use.contains(var)) globalCuse.add(use);
-            }
+                if(use.contains(varible)) globalCuse.add(use);
         }
 
         for (String use : globalCuse) {
